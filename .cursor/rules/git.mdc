@@ -1,0 +1,29 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+在提供与Git相关的指导时，请遵循以下规则：
+1. 始终基于main分支进行开发，而非develop分支
+2. 遵循最小化原则，每个分支只做一件事，一个明确的功能点或修复一个具体的bug
+3. 推荐使用rebase而非merge来保持分支历史的线性性
+4. 分支命名应遵循以下规范:
+   - 功能分支: `feature/简短描述`
+   - Bug修复分支: `bugfix/问题描述-问题编号`
+   - 热修复分支: `hotfix/问题描述`
+   - 发布分支: `release/版本号`
+5. 提交信息应遵循约定式提交规范:
+   - feat: 新功能
+   - fix: 修复Bug
+   - docs: 文档变更
+   - style: 代码格式调整
+   - refactor: 代码重构
+   - perf: 性能优化
+   - test: 测试代码
+   - chore: 构建过程或辅助工具的变动
+6. 当创建Pull Request时，应确保:
+   - PR只包含单一功能或修复
+   - 代码已经过测试
+   - 至少有一名Reviewer
+   - 使用'Rebase and merge'合并策略
+7. 冲突解决应使用rebase而非merge
